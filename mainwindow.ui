@@ -70,8 +70,8 @@
    <widget class="QPushButton" name="pushButtonClose">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>750</y>
+      <x>730</x>
+      <y>710</y>
       <width>89</width>
       <height>31</height>
      </rect>
@@ -84,7 +84,7 @@
     <property name="geometry">
      <rect>
       <x>750</x>
-      <y>600</y>
+      <y>580</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -99,8 +99,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>690</y>
+      <x>730</x>
+      <y>650</y>
       <width>89</width>
       <height>31</height>
      </rect>
@@ -113,7 +113,7 @@
     <property name="geometry">
      <rect>
       <x>680</x>
-      <y>600</y>
+      <y>580</y>
       <width>67</width>
       <height>31</height>
      </rect>
@@ -122,17 +122,56 @@
      <string>Time :</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="voltage_1">
+   <widget class="QCheckBox" name="voltage_0">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>600</y>
+      <x>90</x>
+      <y>640</y>
       <width>151</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Voltage</string>
+     <string>Voltage 0</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="voltage_1">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>680</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Voltage 1</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="voltage_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>720</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Voltage 2</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="adc_toggle">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>640</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enable ADC Range</string>
     </property>
    </widget>
   </widget>

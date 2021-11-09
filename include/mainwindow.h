@@ -29,11 +29,24 @@ private slots:
 
     void on_voltage_1_stateChanged(int arg1);
 
+    void on_voltage_0_stateChanged(int arg1);
+
+    void on_voltage_2_stateChanged(int arg1);
+
+    void on_adc_toggle_stateChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     SecondScreen *second;
     QTimer *dataTimer;
+    int num;
 
+    bool volt_0;
+    bool volt_1;
+    bool volt_2;
+
+    int ADCRange;
+    int volt_range;
 
 };
 #endif // MAINWINDOW_H
