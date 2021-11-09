@@ -20,15 +20,18 @@ VPATH += src/
 
 SOURCES += \
     main.cpp \
+    secondscreen.cpp \
     src/mainwindow.cpp \
     src/qcustomplot.cpp
 
 HEADERS += \
     include/mainwindow.h \
-    include/qcustomplot.h
+    include/qcustomplot.h \
+    secondscreen.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    secondscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

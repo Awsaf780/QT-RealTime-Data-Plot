@@ -2,14 +2,15 @@
 #include "ui_mainwindow.h"
 #include <QTimer>
 #include <QObject>
+#include<string>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setupPlot();
-    realtimeDataSlot();
+//    setupPlot();
+//    realtimeDataSlot();
 
 
 }
@@ -26,7 +27,9 @@ void MainWindow::realtimeDataSlot()
     double key = time.elapsed()/1000.0; // time elapsed since start of demo, in seconds
     static double lastPointKey = 0;
 
-
+    // Show time on
+    QTime t(QTime::currentTime());
+    ui->labelTime->setText(t.toString());
 
     if (key-lastPointKey > 0.002) // at most add point every 2 ms
     {
@@ -51,10 +54,9 @@ void MainWindow::realtimeDataSlot()
     if (key-lastFpsKey > 2) // average fps over 2 seconds
     {
       ui->statusbar->showMessage(
-            QString("%1 FPS, Total Data points: %2 |            Current Time: %3")
+            QString("%1 FPS, Total Data points: %2")
             .arg(frameCount/(key-lastFpsKey), 0, 'f', 0)
             .arg(ui->customPlot->graph(0)->data()->size()+ui->customPlot->graph(1)->data()->size())
-            .arg(key)
 
             , 0);
       lastFpsKey = key;
@@ -82,6 +84,35 @@ void MainWindow::setupPlot()
     // setup a timer that repeatedly calls MainWindow::realtimeDataSlot:
     dataTimer = new QTimer(this);
     connect(dataTimer, SIGNAL(timeout()), this, SLOT(realtimeDataSlot()));
-    dataTimer->start(10); // Interval 0 means to refresh as fast as possible
+    dataTimer->start(30); // Interval 0 means to refresh as fast as possible
 
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    hide();
+    second = new SecondScreen(this);
+    second->show();
+
+}
+
+
+
+void MainWindow::on_voltage_1_stateChanged(int arg1)
+{
+    if(arg1 == 2){
+        setupPlot();
+//        QString s = QString::number(arg1);
+//        ui->voltage_1->setText(s);
+    }
+    else{
+//        ui->customPlot->graph(0)->data()->clear();
+//        ui->customPlot->graph(1)->data()->clear();
+        dataTimer->stop();
+
+        ui->customPlot->replot();
+//        QString s = QString::number(arg1);
+//        ui->voltage_1->setText(s);
+    }
 }

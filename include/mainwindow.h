@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTime>
 #include <time.h>
+#include "secondscreen.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,9 +25,13 @@ private slots:
 
     void realtimeDataSlot();
 
+    void on_pushButton_clicked();
+
+    void on_voltage_1_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;
+    SecondScreen *second;
     QTimer *dataTimer;
 
 
