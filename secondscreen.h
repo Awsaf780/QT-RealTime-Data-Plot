@@ -2,6 +2,7 @@
 #define SECONDSCREEN_H
 
 #include <QDialog>
+#include <qcustomplot.h>
 
 namespace Ui {
 class SecondScreen;
@@ -15,11 +16,14 @@ public:
     explicit SecondScreen(QWidget *parent = nullptr);
     ~SecondScreen();
 
+    void setupCircle();
+
 private slots:
     void on_pushButton_clicked();
 
 private:
     Ui::SecondScreen *ui;
+    QCPCurve *newCurve;
 
 };
 
