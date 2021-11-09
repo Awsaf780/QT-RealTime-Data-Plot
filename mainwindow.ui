@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>866</width>
-    <height>533</height>
+    <width>590</width>
+    <height>546</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QCustomPlot" name="plot" native="true">
+   <widget class="QCustomPlot" name="customPlot" native="true">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -22,78 +22,6 @@
       <width>531</width>
       <height>351</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
-    <property name="geometry">
-     <rect>
-      <x>718</x>
-      <y>240</y>
-      <width>121</width>
-      <height>26</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
-    <property name="geometry">
-     <rect>
-      <x>720</x>
-      <y>310</y>
-      <width>121</width>
-      <height>26</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>720</x>
-      <y>380</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Add</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>718</x>
-      <y>450</y>
-      <width>121</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Clear</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>240</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>X Value</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>310</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Y Value</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
@@ -117,7 +45,7 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>160</x>
        <y>20</y>
        <width>271</width>
        <height>41</height>
@@ -139,7 +67,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>866</width>
+     <width>590</width>
      <height>22</height>
     </rect>
    </property>
